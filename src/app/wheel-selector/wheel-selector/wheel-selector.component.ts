@@ -47,7 +47,7 @@ export class WheelSelectorComponent implements OnInit, AfterViewInit, OnDestroy 
     this.groupsRectList = new Array(this.data.length);
 
     this.eventsRegister();
-    window.addEventListener('resize', this.safeGetRectsBindEvents.bind(this));
+    window.addEventListener('resize', this.safeGetRectsBindEvents.bind(this), {passive: true});
   }
 
   ngAfterViewInit() {
@@ -122,7 +122,7 @@ export class WheelSelectorComponent implements OnInit, AfterViewInit, OnDestroy 
     }
     eventHandlerList.forEach((item, index) => {
       el.removeEventListener(item.name, item.handler, false);
-      el.addEventListener(item.name, item.handler.bind(this), false);
+      el.addEventListener(item.name, item.handler.bind(this), {passive: true});
     });
   }
 
