@@ -1,6 +1,6 @@
 {
-  "name": "@hyperblob/ngx-wheel-selector",
-  "version": "1.1.5",
+  "name": "simple-ngx-wheel-selector",
+  "version": "1.0.2",
   "license": "MIT",
   "scripts": {
     "ng": "ng",

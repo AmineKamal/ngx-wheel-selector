@@ -46,11 +46,12 @@ export class WheelSelectorComponent implements OnInit, AfterViewInit, OnDestroy 
 
     this.groupsRectList = new Array(this.data.length);
 
-    this.eventsRegister();
+    
     window.addEventListener('resize', this.safeGetRectsBindEvents.bind(this), {passive: true});
   }
 
   ngAfterViewInit() {
+    this.eventsRegister();
     this.getGroupsRectList();
   }
 
